@@ -2,6 +2,8 @@ import { GraphQLServer } from 'graphql-yoga';
 
 const typeDefs = `
   type Query {
+  greeting(username : String) : String!
+  addition(x: Int, y:Int) :Int!
    myPost : Post!
   }
   type Post {
@@ -21,6 +23,16 @@ const resolvers = {
                 body: ' Body ',
                 published: 458
             }
+        },
+        greeting(parent, args, ctx, info) {
+            if (args.username) {
+                return `Hello ${args.username}`
+            } else {
+                return "Good Afternoon"
+            }
+        },
+        addition(parent, args, ctx, info) {
+            return args.x + args.y;
         }
     }
 }
