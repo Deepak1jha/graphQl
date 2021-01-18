@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b2630566-48da-4ae2-b346-009dffc61095" name="Default Changelist" comment="Basic Implementation is complete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +52,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1610953565552</updated>
-      <workItem from="1610953566811" duration="5491000" />
+      <workItem from="1610953566811" duration="6636000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Implementation is complete">
       <created>1610959049276</created>
