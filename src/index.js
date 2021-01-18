@@ -3,15 +3,18 @@ import { GraphQLServer } from 'graphql-yoga';
 const authorsData = [{
     id: "1",
     name: "Author 1",
-    org: "Org 1"
+    org: "Org 1",
+    post: "1"
 }, {
     id: "2",
     name: "Author 2",
-    org: "Org 2"
+    org: "Org 2",
+    post: "2"
 }, {
     id: "3",
     name: "Author 3",
-    org: "Org 3"
+    org: "Org 3",
+    post: "1"
 }]
 
 const postData = [{
@@ -33,17 +36,18 @@ const postData = [{
     published: false,
     author: "1"
 }]
+
 const typeDefs = `
   type Query {
     author : Author!
     post : [Post!]!
     authors :[Author!]!
   }
-  
   type Author {
     id : ID!
     name : String!
     org : String!
+    post: Post
   }
   type Post {
     id :ID!
@@ -73,6 +77,13 @@ const resolvers = {
         author(parent, args, ctx, info) {
             return authorsData.find((user) => {
                 return user.id === parent.author;
+            })
+        }
+    },
+    Author: {
+        post(parent, args, ctx, info) {
+            return postData.filter((post) => {
+                return post.id = parent.author;
             })
         }
     }
