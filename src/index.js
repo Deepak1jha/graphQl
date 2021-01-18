@@ -3,7 +3,8 @@ import { GraphQLServer } from 'graphql-yoga';
 const typeDefs = `
   type Query {
   greeting(username : String) : String!
-  addition(x: Int, y:Int) :Int!
+  weeks: [String!]!
+  addition(numbers:[Int!]) :Int!
    myPost : Post!
   }
   type Post {
@@ -32,7 +33,17 @@ const resolvers = {
             }
         },
         addition(parent, args, ctx, info) {
+            if (args.numbers.length === 0) {
+                return 0;
+            } else {
+                return args.numbers.reduce((accumulator, currentValue) => {
+                    return accumulator + currentValue;
+                });
+            }
             return args.x + args.y;
+        },
+        weeks(parent, args, ctx, info) {
+            return ["Monday", "tuesday", "wednesday", "thursday", "friday", "Saturday", "Sunday"]
         }
     }
 }

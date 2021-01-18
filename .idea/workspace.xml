@@ -52,7 +52,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1610953565552</updated>
-      <workItem from="1610953566811" duration="8444000" />
+      <workItem from="1610953566811" duration="9523000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Implementation is complete">
       <created>1610959049276</created>
@@ -84,5 +84,9 @@
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
     <state x="802" y="383" width="313" height="349" key="jetbrains.javascript.buildTools.run-task-popup/0.34.1920.1046@0.34.1920.1046" timestamp="1610960855304" />
+    <state x="539" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1610964652794">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state x="539" y="45" width="840" height="1034" key="search.everywhere.popup/0.34.1920.1046@0.34.1920.1046" timestamp="1610964652794" />
   </component>
 </project>
