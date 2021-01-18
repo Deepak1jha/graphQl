@@ -1,49 +1,58 @@
 import { GraphQLServer } from 'graphql-yoga';
 
+const authorsData =[{
+    id:"1",
+    name :"Author 1",
+    org:"Org 1"
+},{
+    id:"2",
+    name :"Author 2",
+    org:"Org 2"
+},{
+    id:"3",
+    name :"Author 3",
+    org:"Org 3"
+}]
+
 const typeDefs = `
   type Query {
-  greeting(username : String) : String!
-  weeks: [String!]!
-  addition(numbers:[Int!]) :Int!
-   myPost : Post!
+    author : Author!
+    post : Post!
+    authors :[Author!]!
+  }
+  
+  type Author {
+    id :ID!
+    name : String!
+    org : String!
   }
   type Post {
     id :ID!
     title : String!
     body : String!
-    published: Int
+    published: Boolean!
   }
 `
 
 const resolvers = {
     Query: {
-        myPost() {
+        author(){
             return {
-                id: '6544446',
-                title: 'Post Title',
-                body: ' Body ',
-                published: 458
+                id: "6146868",
+                name :"Author Name",
+                org:"Bonami"
             }
         },
-        greeting(parent, args, ctx, info) {
-            if (args.username) {
-                return `Hello ${args.username}`
-            } else {
-                return "Good Afternoon"
+        post(){
+            return {
+                id:"5261",
+                title :"Title  1",
+                body :"Body 1",
+                published:true
             }
         },
-        addition(parent, args, ctx, info) {
-            if (args.numbers.length === 0) {
-                return 0;
-            } else {
-                return args.numbers.reduce((accumulator, currentValue) => {
-                    return accumulator + currentValue;
-                });
-            }
-            return args.x + args.y;
-        },
-        weeks(parent, args, ctx, info) {
-            return ["Monday", "tuesday", "wednesday", "thursday", "friday", "Saturday", "Sunday"]
+        authors(parent, args, ctx, info){
+            return authorsData;
         }
     }
 }
