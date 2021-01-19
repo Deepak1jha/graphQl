@@ -43,6 +43,9 @@ const typeDefs = `
     post : [Post!]!
     authors :[Author!]!
   }
+  type Mutation {
+  createAuthor(name : String!,org : String!) : Author!
+  }
   type Author {
     id : ID!
     name : String!
@@ -73,7 +76,15 @@ const resolvers = {
         authors(parent, args, ctx, info) {
             return authorsData;
         }
-    }, Post: {
+    },
+    Mutation : {
+        createAuthor(parent, args, ctx, info){
+            console.log('args');
+            console.log(args);
+            console.log('args');
+        }
+    },
+    Post: {
         author(parent, args, ctx, info) {
             return authorsData.find((user) => {
                 return user.id === parent.author;
