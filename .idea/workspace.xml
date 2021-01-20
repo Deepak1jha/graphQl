@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2630566-48da-4ae2-b346-009dffc61095" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +56,7 @@
       <workItem from="1611025946042" duration="2236000" />
       <workItem from="1611111845824" duration="2359000" />
       <workItem from="1611116516596" duration="57000" />
-      <workItem from="1611163184984" duration="1987000" />
+      <workItem from="1611163184984" duration="3198000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Implementation is complete">
       <created>1610959049276</created>

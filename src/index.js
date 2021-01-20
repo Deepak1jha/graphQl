@@ -46,10 +46,23 @@ const typeDefs = `
     authors :[Author!]!
   }
   type Mutation {
-  createAuthor(name : String!,org : String!) : Author!
-  createPost(title : String! , body : String! , published : Boolean!, author :ID!) :Post!
+  createAuthor(data : CreateAuthorType) : Author!
+  createPost(data : createPostInput) :Post!
   createComment(title :String!, desc : String !, author :ID!, post: ID!) : Comment!
   }
+  
+  input CreateAuthorType {
+  name : String!
+  org: String !
+  }
+  
+  input createPostInput {
+   title : String! 
+   body : String! 
+   published : Boolean!
+    author :ID!
+  }
+  
   type Author {
     id : ID!
     name : String!
@@ -91,35 +104,35 @@ const resolvers = {
     },
     Mutation: {
         createAuthor(parent, args, ctx, info) {
-            const isEmailExist = authorsData.some((author) => author.name === args.name);
+            const isEmailExist = authorsData.some((author) => author.name === args.data.name);
             if (isEmailExist) throw new Error('Name Already Exist');
             const author = {
                 id: uuidv4(),
-                ...args
-            }
+                ...args.data
+             }
             authorsData.push(author);
             return author;
         },
         createPost(parent, args, ctx, info) {
-            const isEmailExist = authorsData.some((author) => author.id === args.author);
+            const isEmailExist = authorsData.some((author) => author.id === args.data.author);
             if (!isEmailExist) {
                 throw new Error('Author Not Found');
             }
             const post = {
                 id: uuidv4(),
-                ...args
+                ...args.data
             }
             postData.push(post);
             return post;
         },
         createComment(parent, args, ctx, info){
-            const isAuthorExist = authorsData.some((author)=>author.id===args.authorId);
-            const isPostExist = postData.some((post)=>post.id===args.postId);
+            const isAuthorExist = authorsData.some((author)=>author.id===args.data.author);
+            const isPostExist = postData.some((post)=>post.id===args.data.post);
             if (!isAuthorExist) throw new Error("Author Does Not Exist");
             if (!isPostExist) throw new Error("Post Does Not Exist");
             const comment = {
                 id: uuidv4(),
-                ...args
+                ...args.data
             }
             postData.push(comment);
             return comment;
