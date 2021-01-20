@@ -95,8 +95,7 @@ const resolvers = {
             if (isEmailExist) throw new Error('Name Already Exist');
             const author = {
                 id: uuidv4(),
-                name: args.name,
-                org: args.org
+                ...args
             }
             authorsData.push(author);
             return author;
@@ -108,10 +107,7 @@ const resolvers = {
             }
             const post = {
                 id: uuidv4(),
-                title: args.title,
-                body: args.body,
-                published: args.published,
-                author:args.author
+                ...args
             }
             postData.push(post);
             return post;
@@ -123,15 +119,11 @@ const resolvers = {
             if (!isPostExist) throw new Error("Post Does Not Exist");
             const comment = {
                 id: uuidv4(),
-                title: args.title,
-                desc: args.desc,
-                post: args.post,
-                author:args.author
+                ...args
             }
             postData.push(comment);
             return comment;
         }
-
     },
     Post: {
         author(parent, args, ctx, info) {

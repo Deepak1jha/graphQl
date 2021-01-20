@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2630566-48da-4ae2-b346-009dffc61095" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +58,7 @@
       <workItem from="1611025946042" duration="2236000" />
       <workItem from="1611111845824" duration="2359000" />
       <workItem from="1611116516596" duration="57000" />
-      <workItem from="1611163184984" duration="1494000" />
+      <workItem from="1611163184984" duration="1987000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Implementation is complete">
       <created>1610959049276</created>
@@ -96,6 +98,10 @@
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
     <state x="455" y="224" width="1000" height="664" key="Vcs.Push.Dialog.v2/0.34.1920.1046@0.34.1920.1046" timestamp="1611113434870" />
+    <state x="517" y="87" width="876" height="938" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1611165014036">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state x="517" y="87" width="876" height="938" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.34.1920.1046@0.34.1920.1046" timestamp="1611165014036" />
     <state x="802" y="383" width="313" height="349" key="jetbrains.javascript.buildTools.run-task-popup" timestamp="1610960855304">
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
