@@ -1,5 +1,7 @@
 import { GraphQLServer } from 'graphql-yoga';
 
+const { v4: uuidv4 } = require('uuid');
+
 const authorsData = [{
     id: "1",
     name: "Author 1",
@@ -45,6 +47,7 @@ const typeDefs = `
   }
   type Mutation {
   createAuthor(name : String!,org : String!) : Author!
+  createPost(title : String! , body : String! , published : Boolean!, author :ID!) :Post!
   }
   type Author {
     id : ID!
@@ -77,11 +80,32 @@ const resolvers = {
             return authorsData;
         }
     },
-    Mutation : {
-        createAuthor(parent, args, ctx, info){
-            console.log('args');
-            console.log(args);
-            console.log('args');
+    Mutation: {
+        createAuthor(parent, args, ctx, info) {
+            const isEmailExist = authorsData.some((author) => author.name === args.name);
+            if (isEmailExist) throw new Error('Name Already Exist');
+            const author = {
+                id: uuidv4(),
+                name: args.name,
+                org: args.org
+            }
+            authorsData.push(author);
+            return author;
+        },
+        createPost(parent, args, ctx, info) {
+            const isEmailExist = authorsData.some((author) => author.id === args.author);
+            if (!isEmailExist) {
+                throw new Error('Author Not Found');
+            }
+            const post = {
+                id: uuidv4(),
+                title: args.title,
+                body: args.body,
+                published: args.published,
+                author:args.author
+            }
+            postData.push(post);
+            return post;
         }
     },
     Post: {
