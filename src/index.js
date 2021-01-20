@@ -48,6 +48,7 @@ const typeDefs = `
   type Mutation {
   createAuthor(name : String!,org : String!) : Author!
   createPost(title : String! , body : String! , published : Boolean!, author :ID!) :Post!
+  createComment(title :String!, desc : String !, author :ID!, post: ID!) : Comment!
   }
   type Author {
     id : ID!
@@ -61,7 +62,15 @@ const typeDefs = `
     body : String!
     published: Boolean!
     author : Author!
+    comment : Comment !
   }
+  type Comment {
+    id :ID!
+    title : String!
+    desc  :  String!
+    postId : String!
+    authorId : String!
+    }
 `
 
 const resolvers = {
@@ -106,7 +115,23 @@ const resolvers = {
             }
             postData.push(post);
             return post;
+        },
+        createComment(parent, args, ctx, info){
+            const isAuthorExist = authorsData.some((author)=>author.id===args.authorId);
+            const isPostExist = postData.some((post)=>post.id===args.postId);
+            if (!isAuthorExist) throw new Error("Author Does Not Exist");
+            if (!isPostExist) throw new Error("Post Does Not Exist");
+            const comment = {
+                id: uuidv4(),
+                title: args.title,
+                desc: args.desc,
+                post: args.post,
+                author:args.author
+            }
+            postData.push(comment);
+            return comment;
         }
+
     },
     Post: {
         author(parent, args, ctx, info) {
