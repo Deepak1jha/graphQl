@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2630566-48da-4ae2-b346-009dffc61095" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/schema/Schema.graphql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
@@ -62,6 +61,7 @@
       <workItem from="1611249046707" duration="60000" />
       <workItem from="1611249135010" duration="15000" />
       <workItem from="1611249846801" duration="584000" />
+      <workItem from="1611251869536" duration="424000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Implementation is complete">
       <created>1610959049276</created>
