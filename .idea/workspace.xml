@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2630566-48da-4ae2-b346-009dffc61095" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/schema/Schema.graphql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
@@ -56,7 +57,11 @@
       <workItem from="1611025946042" duration="2236000" />
       <workItem from="1611111845824" duration="2359000" />
       <workItem from="1611116516596" duration="57000" />
-      <workItem from="1611163184984" duration="3198000" />
+      <workItem from="1611163184984" duration="3334000" />
+      <workItem from="1611199088457" duration="975000" />
+      <workItem from="1611249046707" duration="60000" />
+      <workItem from="1611249135010" duration="15000" />
+      <workItem from="1611249846801" duration="584000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Implementation is complete">
       <created>1610959049276</created>
@@ -88,6 +93,10 @@
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
     <state x="610" y="346" width="689" height="420" key="#Notifications/0.34.1920.1046@0.34.1920.1046" timestamp="1611163727571" />
+    <state x="573" y="331" width="764" height="449" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1611249087495">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state x="573" y="331" width="764" height="449" key="#com.intellij.fileTypes.FileTypeChooser/0.34.1920.1046@0.34.1920.1046" timestamp="1611249087495" />
     <state x="426" y="34" width="1057" height="1046" key="CommitChangelistDialog2" timestamp="1611113428554">
       <screen x="0" y="34" width="1920" height="1046" />
     </state>

@@ -1,0 +1,45 @@
+  type Query {
+    author : Author!
+    post : [Post!]!
+    authors :[Author!]!
+  }
+  type Mutation {
+  createAuthor(data : CreateAuthorType) : Author!
+  createPost(data : createPostInput) :Post!
+  createComment(title :String!, desc : String !, author :ID!, post: ID!) : Comment!
+  deleteAuthor(id : ID!) :Author!
+  }
+  
+  input CreateAuthorType {
+  name : String!
+  org: String !
+  }
+  
+  input createPostInput {
+   title : String! 
+   body : String! 
+   published : Boolean!
+    author :ID!
+  }
+  
+  type Author {
+    id : ID!
+    name : String!
+    org : String!
+    post: Post
+  }
+  type Post {
+    id :ID!
+    title : String!
+    body : String!
+    published: Boolean!
+    author : Author!
+    comment : Comment !
+  }
+  type Comment {
+    id :ID!
+    title : String!
+    desc  :  String!
+    postId : String!
+    authorId : String!
+    }
